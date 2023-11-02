@@ -20,7 +20,7 @@ Date of finished: 31.09.2023\
    В процессе выполнения лабораторной работы были выпонены следующие шаги:
 ### 1. Установлен и зупущен Manikube. Docker уже был установлен ранее.
 
-![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/media/lab1_1)
+![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab1_1.png)
 
 ### 2. Далее был создан манифест для запуска пода.
 
@@ -37,7 +37,7 @@ Date of finished: 31.09.2023\
 ```
 minikube kubectl -- apply -f manifest.yaml
 ```
-![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/media/lab1_2)
+![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab1_2.png)
 
 ### 4. Создание сервиса для доступа к поду.
 
@@ -45,17 +45,17 @@ minikube kubectl -- apply -f manifest.yaml
 ```
 minikube kubectl -- expose pod vault --type=NodePort --port=8200
 ```
-![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/media/lab1_3)
+![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab1_3.png)
 
 Так же необходимо настроить проброс портов. Для этого можно воспользоваться следующей командой.
 ```
 minikube kubectl -- port-forward service/vault 8200:8200
 ```
-![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/media/lab1_4)
+![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab1_4.png)
 
 Теперь подключиться к сервису можно пройдя по адресу [http://localhost:8200](http://localhost:8200).
 
-![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/media/lab1_5)
+![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab1_5.png)
 
 Ответ на вопрос, что сделали команды:
   * `kubectl apply` создает объект kubernetes согласно описанию в переданном файле, URL или из stdin.
@@ -66,14 +66,14 @@ minikube kubectl -- port-forward service/vault 8200:8200
 
 Как было сказано, токен для подключения хранится в логах. Получить логи сервиса можно при помощи команды `kubectl logs <название пода>`
 
-![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/media/lab1_6)
+![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab1_6.png)
 
 Данный токен был введен в соответствующее поле на сервисе, был выполнен вход.
 
-![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/media/lab1_7)
+![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab1_7.png)
 
 
 ## Вывод
 Таким образом, были изучены инструменты Minikube и Docker, развернут свой первый "под".
 
-![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/media/lab1_8)
+![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab1_8.png)
