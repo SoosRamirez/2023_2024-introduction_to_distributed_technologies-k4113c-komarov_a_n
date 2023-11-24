@@ -51,6 +51,7 @@ Date of finished: 31.09.2023\
   Проверим, что все получилось.
   ```
   kubectl get nodes -l region=RU
+  kubectl get nodes -l region=EN
   ```
 
   ![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab4_5.png)
@@ -88,11 +89,11 @@ spec:
 
   Чтобы создать новый пул, необходимо сначала удалить дефолтный
   ```
-  calicoctl delete ippools default-ipv4-ippool
+  ./calicoctl delete ippools default-ipv4-ippool
   ```
   а потом уже применить только что созданный манифест
   ```
-  ./calicoctl create -f -< ippool.yml
+  ./calicoctl create -f -< ippool.yaml
   ```
 
   ![image](https://github.com/SoosRamirez/2023_2024-introduction_to_distributed_technologies-k4113c-komarov_a_n/blob/main/media/lab4_6.png)
